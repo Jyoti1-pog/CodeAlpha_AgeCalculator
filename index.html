@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#6a0dad" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="top-controls">
+      <select id="langSelect">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+      <label class="switch">
+        <input type="checkbox" id="modeToggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <h1 id="title">🎂 Age Calculator</h1>
+    <p id="subtitle">Find out your exact age in years, months, and days</p>
+
+    <form id="ageForm">
+      <label id="dobLabel" for="dob">Choose your date of birth:</label>
+      <div style="position: relative; width: 100%;">
+        <input
+          type="text"
+          id="dob"
+          placeholder="Select your date of birth"
+          required
+          autocomplete="off"
+        />
+        <button
+          type="button"
+          id="voiceBtn"
+          title="Speak your birthdate"
+          aria-label="Speak your birthdate"
+        >🎤</button>
+      </div>
+      <button type="submit" id="calcBtn">Calculate Age</button>
+    </form>
+
+    <div id="result" role="alert" aria-live="polite"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
